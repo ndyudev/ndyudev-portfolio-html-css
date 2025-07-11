@@ -1,0 +1,141 @@
+/* *=====================
+    Media Queries 
+=========================*/
+
+/* *=====================
+    Desktop
+=========================*/
+@media (max-width: 1536px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1028px;
+    }
+
+    /* *SKILLS* */
+    .softSkills_badge {
+        position: static !important;
+        transform: none !important;
+    }
+
+    .softSkills__book_icons {
+        display: none;
+    }
+}
+
+/* *=====================
+      Tablet & small laptop
+  =========================*/
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    section {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    /** Header **/
+    .header__container {
+        flex-direction: column;
+    }
+
+    .header__column--left {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__content--left {
+        align-items: center;
+
+        & p {
+            text-align: center;
+            max-width: 320px;
+        }
+    }
+
+    .header__column--right {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* *=====================
+     Small Tablet - landscape mode
+  =========================*/
+@media (max-width: 768px) {
+    .container {
+        max-width: 640px;
+    }
+
+    /** ABOUT ME **/
+    .aboutMe__section {
+        margin: 80px auto;
+
+        & img {
+            display: none;
+        }
+    }
+
+    /** SKILLS **/
+    .skills__grid_container {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        grid-template-rows: repeat(4, minmax(280px, auto));
+        /* grid-template-rows: repeat(2, minmax(280px, auto)); */
+        /* grid-auto-rows: minmax(280px, auto); */
+
+        & .skills__grid_item {
+            padding: 1rem 1rem;
+            grid-column: span 1 !important;
+            grid-row: span 1 !important;
+        }
+    }
+}
+
+/* *=====================
+     Phone
+  =========================*/
+@media (max-width: 640px) {
+    :root {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .container {
+        max-width: 475px;
+        padding: 0 1rem;
+    }
+
+    .section__title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+
+    /** Header **/
+
+    header {
+        margin-top: 20px;
+    }
+
+    .header__badge_container {
+        flex-direction: column;
+    }
+
+    /** ABOUT ME **/
+    .aboutMe__container {
+        padding: 1rem;
+        width: 90%;
+        border-radius: 2rem;
+    }
+
+    .aboutMe__content_container {
+        border-radius: 2rem;
+    }
+}
