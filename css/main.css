@@ -5,6 +5,7 @@
 @import "./sections/projects.css";
 @import "./sections/footer.css";
 @import "./animation.css";
+@import "./sections/service.css";
 
 * {
 	box-sizing: border-box;

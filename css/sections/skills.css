@@ -41,7 +41,7 @@
 
     &:nth-child(1) {
         border: none;
-        background: url("../../assets/cat1.jpeg") center / cover no-repeat;
+        background: url("../../assets/skill.jpg") center / cover no-repeat;
     }
 
     &:nth-child(2) {
@@ -207,11 +207,11 @@
     }
 
     &:nth-child(4) {
-        background: url("../../assets/cat3.jpeg") center / cover no-repeat;
+        background: url("../../assets/skill2.jpg") center / cover no-repeat;
         border: none;
 
         &:hover {
-            background-image: url("../../assets/cat2.jpeg");
+            background-image: url("../../assets/skill3.jpg");
         }
     }
 }

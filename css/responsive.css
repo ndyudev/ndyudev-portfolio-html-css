@@ -139,3 +139,40 @@
         border-radius: 2rem;
     }
 }
+
+/* Responsive Design for Services */
+@media (max-width: 768px) {
+    .services__grid_container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .services__grid_item {
+        padding: 24px;
+    }
+
+    .services__icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .services__icon img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services__grid_item {
+        padding: 20px;
+    }
+
+    .services__tech_stack {
+        gap: 6px;
+    }
+
+    .tech_badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+}
