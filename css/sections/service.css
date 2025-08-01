@@ -1,0 +1,129 @@
+/* Services Section Styles */
+.services__section {
+    position: relative;
+}
+
+.services__container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.services__grid_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.services__grid_item {
+    background: var(--foreground-color);
+    border: 2px solid var(--p-200);
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.services__grid_item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--p-500), var(--p-700));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.services__grid_item:hover {
+    transform: translateY(-8px);
+    border-color: var(--p-400);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.services__grid_item:hover::before {
+    transform: scaleX(1);
+}
+
+.services__icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--p-100), var(--p-200));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+.services__icon img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(20%) saturate(2000%) hue-rotate(200deg) brightness(0.8) contrast(1);
+}
+
+/* Special handling for PostgreSQL icon */
+.services__icon img[src*="postgresql.svg"] {
+    filter: none;
+    width: 28px;
+    height: 28px;
+}
+
+.services__grid_item:hover .services__icon {
+    background: linear-gradient(135deg, var(--p-500), var(--p-700));
+    transform: scale(1.1);
+}
+
+/* Remove hover color change for all icons */
+.services__grid_item:hover .services__icon img {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(20%) saturate(2000%) hue-rotate(200deg) brightness(0.8) contrast(1);
+}
+
+/* Special handling for PostgreSQL icon on hover */
+.services__grid_item:hover .services__icon img[src*="postgresql.svg"] {
+    filter: none;
+}
+
+.services__grid_item h3 {
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    font-weight: 600;
+    color: var(--p-950);
+    margin-bottom: 16px;
+    text-transform: capitalize;
+}
+
+.services__grid_item p {
+    color: var(--n-600);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+}
+
+.services__tech_stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech_badge {
+    background: var(--p-100);
+    color: var(--p-700);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid var(--p-200);
+    transition: all 0.3s ease;
+}
+
+.tech_badge:hover {
+    background: var(--p-500);
+    color: var(--foreground-color);
+    border-color: var(--p-500);
+    transform: translateY(-2px);
+}
